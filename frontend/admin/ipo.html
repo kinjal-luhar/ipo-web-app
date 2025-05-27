@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add IPO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+  if (localStorage.getItem("isAdminLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+  <div class="container mt-5">
+    <h2>Add New IPO</h2>
+    <form id="ipo-form">
+      <div class="mb-3">
+        <label class="form-label">Company ID</label>
+        <input type="number" id="company_id" class="form-control" placeholder="e.g., 1">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Price Band</label>
+        <input type="text" id="price_band" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Open Date</label>
+        <input type="date" id="open_date" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Close Date</label>
+        <input type="date" id="close_date" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Issue Size</label>
+        <input type="text" id="issue_size" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Issue Type</label>
+        <input type="text" id="issue_type" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Listing Date</label>
+        <input type="date" id="listing_date" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Status</label>
+        <select id="status" class="form-select">
+          <option>Upcoming</option>
+          <option>Open</option>
+          <option>Closed</option>
+          <option>Listed</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">IPO Price</label>
+        <input type="number" id="ipo_price" step="0.01" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Listing Price</label>
+        <input type="number" id="listing_price" step="0.01" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Listing Gain</label>
+        <input type="number" id="listing_gain" step="0.01" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Current Market Price</label>
+        <input type="number" id="current_market_price" step="0.01" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Current Return</label>
+        <input type="number" id="current_return" step="0.01" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Add IPO</button>
+    </form>
+    <div id="message" class="mt-3"></div>
+  </div>
+
+  <script src="ipo.js"></script>
+</body>
+</html>
